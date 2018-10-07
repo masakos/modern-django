@@ -28,10 +28,10 @@ jobs:
           name: run migrate
           command: |
             . venv/bin/activate
-            python manage.py migrate
+            python manage.py migrate --settings=config.settings.base
 
       - run:
           name: run tests
           command: |
             . venv/bin/activate
-            python -Wd manage.py test
+            python -Wd manage.py test --settings=config.settings.base
